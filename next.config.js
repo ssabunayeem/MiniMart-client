@@ -8,10 +8,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "gagadget.com",
+        hostname: "images.unsplash.com",
       },
     ],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
