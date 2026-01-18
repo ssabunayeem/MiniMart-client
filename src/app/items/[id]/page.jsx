@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 async function getItem(id) {
-  const res = await fetch(`http://localhost:4000/items/${id}`, {
+  const res = await fetch(`https://minimart-server-f7td.onrender.com/items/${id}`, {
     cache: "no-store",
   });
   if (!res.ok) {

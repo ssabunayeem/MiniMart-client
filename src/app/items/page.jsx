@@ -6,7 +6,7 @@ import {
 } from "../../components/AnimationWrapper";
 
 async function getItems() {
-  const res = await fetch("http://localhost:4000/items", { cache: "no-store" });
+  const res = await fetch("https://minimart-server-f7td.onrender.com/items", { cache: "no-store" });
   if (!res.ok) {
     throw new Error("Failed to fetch items");
   }

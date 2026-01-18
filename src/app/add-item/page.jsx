@@ -22,7 +22,7 @@ export default function AddItemPage() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:4000/items", {
+      const res = await fetch("https://minimart-server-f7td.onrender.com/items", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
