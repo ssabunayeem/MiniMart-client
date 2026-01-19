@@ -8,7 +8,7 @@ const slides = [
   {
     image: "/assets/hero1.jpg",
     title: "Neo-Tech: Tomorrow's Gadgets, Today.",
-    description: "Experience the next generation of seamless connectivity nayeem.",
+    description: "Experience the next generation of seamless connectivity.",
   },
   {
     image: "/assets/hero2.jpg",
