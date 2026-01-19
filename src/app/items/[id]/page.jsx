@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 async function getItem(id) {
   const res = await fetch(
@@ -24,12 +24,12 @@ export default async function ItemDetailPage({ params }) {
         <p className="text-gray-400">
           The item you are looking for does not exist.
         </p>
-        <a
+        <Link
           href="/items"
           className="text-cyan-400 hover:text-cyan-300 mt-4 inline-block font-medium"
         >
           Back to Items
-        </a>
+        </Link>
       </div>
     );
   }
@@ -38,13 +38,10 @@ export default async function ItemDetailPage({ params }) {
     <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row mt-10">
       <div className="md:w-1/2 p-8 bg-black/20 flex items-center justify-center">
         <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
-          <Image
+          <img
             src={item.image}
             alt={item.name}
-            fill
-            unoptimized
-            className="object-cover"
-            priority
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
@@ -60,12 +57,12 @@ export default async function ItemDetailPage({ params }) {
           <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-4 rounded-xl hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-[1.02] transition-all duration-300">
             Add to Cart
           </button>
-          <a
+          <Link
             href="/items"
             className="block text-center mt-6 text-gray-500 hover:text-white transition-colors"
           >
             &larr; Continue Shopping
-          </a>
+          </Link>
         </div>
       </div>
     </div>
