@@ -1,9 +1,12 @@
 import Image from "next/image";
 
 async function getItem(id) {
-  const res = await fetch(`https://minimart-server-f7td.onrender.com/items/${id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://minimart-server-f7td.onrender.com/items/${id}`,
+    {
+      cache: "no-store",
+    },
+  );
   if (!res.ok) {
     return null;
   }
@@ -39,6 +42,7 @@ export default async function ItemDetailPage({ params }) {
             src={item.image}
             alt={item.name}
             fill
+            unoptimized
             className="object-cover"
             priority
           />

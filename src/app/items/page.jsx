@@ -6,7 +6,9 @@ import {
 } from "../../components/AnimationWrapper";
 
 async function getItems() {
-  const res = await fetch("https://minimart-server-f7td.onrender.com/items", { cache: "no-store" });
+  const res = await fetch("https://minimart-server-f7td.onrender.com/items", {
+    cache: "no-store",
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch items");
   }
@@ -33,6 +35,7 @@ export default async function ItemsPage() {
                     src={item.image}
                     alt={item.name}
                     fill
+                    unoptimized
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
