@@ -6,18 +6,18 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "/assets/images/hero1.jpg",
+    image: "/assets/hero1.jpg",
     title: "Neo-Tech: Tomorrow's Gadgets, Today.",
     description: "Experience the next generation of seamless connectivity.",
   },
   {
-    image: "/assets/images/hero2.jpg",
+    image: "/assets/hero2.jpg",
     title: "Command Your Workspace",
     description:
       "Ultimate setups for coding, gaming, and unparalleled productivity.",
   },
   {
-    image: "/assets/images/hero3.jpg",
+    image: "/assets/hero3.jpg",
     title: "Immersive Audio Experience",
     description: "Dive deep into the soundscape with our premium audio gear.",
   },
