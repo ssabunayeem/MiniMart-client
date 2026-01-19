@@ -18,6 +18,15 @@ async function getItems() {
 export default async function ItemsPage() {
   const items = await getItems();
 
+  const localImages = {
+    1: "/assets/headphones.jpg",
+    2: "/assets/chair.jpg",
+    3: "/assets/keyboard.jpg",
+    4: "/assets/Smar-Watch.jpg",
+    5: "/assets/4K-Monitor.jpg",
+    6: "/assets/Docker.jpg",
+  };
+
   return (
     <div className="container mx-auto px-6 my-10">
       <FadeInUp>
@@ -32,7 +41,7 @@ export default async function ItemsPage() {
               <div className="group rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 transition-all duration-300 p-6 flex flex-col shadow-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] h-full">
                 <div className="h-64 bg-slate-800/50 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500">
                   <img
-                    src={item.image}
+                    src={localImages[item.id] || item.image}
                     alt={item.name}
                     className="w-full h-full object-cover"
                   />

@@ -34,12 +34,21 @@ export default async function ItemDetailPage({ params }) {
     );
   }
 
+  const localImages = {
+    1: "/assets/headphones.jpg",
+    2: "/assets/chair.jpg",
+    3: "/assets/keyboard.jpg",
+    4: "/assets/Smar-Watch.jpg",
+    5: "/assets/4K-Monitor.jpg",
+    6: "/assets/Docker.jpg",
+  };
+
   return (
     <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row mt-10">
       <div className="md:w-1/2 p-8 bg-black/20 flex items-center justify-center">
         <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
           <img
-            src={item.image}
+            src={localImages[item.id] || item.image}
             alt={item.name}
             className="w-full h-full object-cover"
           />
